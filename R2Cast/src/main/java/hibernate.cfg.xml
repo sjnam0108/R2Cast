@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    	<property name="connection.url">jdbc:mysql://localhost/r2cast</property>
+    	<property name="connection.username">signcast</property>
+    	<property name="connection.password">signcastfnd</property>
+    	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+    	<property name="c3p0.min_size">1</property>
+    	<property name="c3p0.max_size">5</property>
+    	<property name="c3p0.timeout">300</property>
+    	<property name="c3p0.max_statements">50</property>
+    	<property name="c3p0.idle_test_period">3000</property>
+    	
+    	<property name="show_sql">true</property>
+    	<property name="format_sql">true</property>
+    	<property name="generate_statistics">true</property>
+    	
+    	<mapping class="kr.co.r2cast.models.fnd.LoginLog"/>
+    	<mapping class="kr.co.r2cast.models.fnd.Menu"/>
+    	<mapping class="kr.co.r2cast.models.fnd.Privilege"/>
+    	<mapping class="kr.co.r2cast.models.fnd.Role"/>
+    	<mapping class="kr.co.r2cast.models.fnd.RolePrivilege"/>
+    	<mapping class="kr.co.r2cast.models.fnd.Site"/>
+    	<mapping class="kr.co.r2cast.models.fnd.SiteSite"/>
+    	<mapping class="kr.co.r2cast.models.fnd.SiteUser"/>
+    	<mapping class="kr.co.r2cast.models.fnd.User"/>
+    	<mapping class="kr.co.r2cast.models.fnd.UserPrivilege"/>
+    	
+    	<mapping class="kr.co.r2cast.models.eco.DispMenu"/>
+    	<mapping class="kr.co.r2cast.models.eco.MonEventReport"/>
+    	<mapping class="kr.co.r2cast.models.eco.MonTask"/>
+    	<mapping class="kr.co.r2cast.models.eco.RecDailySummary"/>
+    	<mapping class="kr.co.r2cast.models.eco.RecStatusStat"/>
+    	<mapping class="kr.co.r2cast.models.eco.RtnSchdTask"/>
+    	<mapping class="kr.co.r2cast.models.eco.RtnSchdTaskRvm"/>
+    	<mapping class="kr.co.r2cast.models.eco.Rvm"/>
+    	<mapping class="kr.co.r2cast.models.eco.RvmGroup"/>
+    	<mapping class="kr.co.r2cast.models.eco.RvmGroupRvm"/>
+    	<mapping class="kr.co.r2cast.models.eco.RvmGroupUser"/>
+    	<mapping class="kr.co.r2cast.models.eco.RvmLastReport"/>
+    	<mapping class="kr.co.r2cast.models.eco.RvmStatusLine"/>
+    	<mapping class="kr.co.r2cast.models.eco.RvmTrx"/>
+    	<mapping class="kr.co.r2cast.models.eco.RvmTrxItem"/>
+    	<mapping class="kr.co.r2cast.models.eco.SiteOpt"/>
+    	<mapping class="kr.co.r2cast.models.eco.UpdSetupFile"/>
+    </session-factory>
+</hibernate-configuration>
